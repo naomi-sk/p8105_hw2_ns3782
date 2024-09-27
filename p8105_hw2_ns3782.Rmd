@@ -3,6 +3,8 @@ title: "p8105_hw2_ns3782"
 author: "NSK"
 date: "2024-09-26"
 output: github_document
+toc: true
+code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
@@ -10,12 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r setup, include=FALSE}
+```{r libraries, include=FALSE}
 library(tidyverse)
 ```
 
-## Problem 1
-
+# Problem 1
 
 ```{r problem_1}
 
@@ -35,3 +36,12 @@ nyc_transit_df =
 
 
 ```
+
+## Dataset overview
+
+The cleaned NYC Transit Subway Entrance and Exit dataset contains information about entrances and exits of subway stations in New York City. Variables selected for inclusion in the cleaned dataset imported into R include the line, station name, location coordinates (latitude and longitude), routes served (route 1 through to route 11), entry, vending presence, entrance type, and ADA compliance. 
+
+The data cleaning process involved reading the CSV file from a local subdirectory /data, cleaning variable names using the janitor package, selecting variables of interest, and converting the 'entry' variable from character ("YES"/"NO") to logical (TRUE/FALSE). 
+
+The resulting dataset has **`r nrow(nyc_transit_df)` rows** and **`r ncol(nyc_transit_df)` columns**. The dataset is not tidy because information about routes served is spread across multiple columns (Route1 through Route11). This does not align with good tidy data practice, as each variable should form a column and each observation should form a row.
+
