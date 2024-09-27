@@ -145,6 +145,21 @@ combined_trash_wheel <- bind_rows(
 ) %>%
   select(trash_wheel, everything())
 
+# Total weight collected by Prof Trash Wheel
+prof_total_weight <- prof_trash_wheel_df %>%
+  summarize(total_weight = sum(weight_tons)) %>%
+  pull(total_weight)
+
+# Total cigarette butts collected by Gwynnda June 2022
+gwynnda_june_2022_butts <- gwynnda_trash_wheel_df %>%
+  filter(month == "June", year == 2022) %>%
+  summarize(total_butts = sum(cigarette_butts)) %>%
+  pull(total_butts)
 
 ```
 
+## Combined trash wheel Dataset Overview
+
+The combined Trash Wheel dataset contains `r nrow(combined_trash_wheel)` observations and `r ncol(combined_trash_wheel)` variables. Key variables include the identifier for each trash wheel (`r unique(combined_trash_wheel$trash_wheel)`), the date of collection, the amount of trash collected (in tons and cubic yards), types of litter collected (e.g., plastic bottles, polystyrene, cigarette butts), and number of homes powered based on trash collected.
+
+The data shows that Professor Trash Wheel has collected a total of `r prof_total_weight` tons of trash since its deployment. In June 2022, Gwynnda Trash Wheel collected `r scales::comma(gwynnda_june_2022_butts, accuracy = 1)` cigarette butts.
