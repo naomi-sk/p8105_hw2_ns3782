@@ -103,9 +103,47 @@ mr_trash_wheel_df <- read_excel(
   filter(!is.na(dumpster)) %>% 
   mutate(
     sports_balls = as.integer(round(sports_balls)),
-    year = as.integer(year)
+    trash_wheel = "Mr. Trash Wheel",
+    year = as.numeric(year)
   )
 
+## Read and clean Professor Trash Wheel sheet
+prof_trash_wheel_df <- read_excel(
+  "./data/trash_wheel_collection_data.xlsx",
+  sheet = "Professor Trash Wheel",
+  range = cell_cols("A:M"),
+  skip = 1
+) %>% 
+  janitor::clean_names() %>% 
+  filter(!is.na(dumpster)) %>% 
+  mutate(
+    trash_wheel = "Professor Trash Wheel",
+    year = as.numeric(year)
+  )
+
+## Read and clean Gwynnda Wheel sheet
+
+gwynnda_trash_wheel_df <- read_excel(
+  "./data/trash_wheel_collection_data.xlsx",
+  sheet = "Gwynnda Trash Wheel",
+  range = cell_cols("A:L"),
+  skip = 1
+) %>% 
+  janitor::clean_names() %>% 
+  filter(!is.na(dumpster)) %>% 
+  mutate(
+    trash_wheel = "Gwynnda Trash Wheel",
+    year = as.numeric(year)
+  )
+
+
+## Combine all trash wheel datasets
+combined_trash_wheel <- bind_rows(
+  mr_trash_wheel_df, 
+  prof_trash_wheel_df, 
+  gwynnda_trash_wheel_df
+) %>%
+  select(trash_wheel, everything())
 
 
 ```
