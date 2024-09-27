@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r libraries, include=FALSE}
 library(tidyverse)
+library(readxl)
 
 ```
 
@@ -84,3 +85,28 @@ prop_no_vending_entry <- nyc_transit_df %>%
 ```
 
 The proportion of station entrances/exits without vending that allow entrance is `r prop_no_vending_entry`, or `r scales::percent(prop_no_vending_entry, accuracy = 0.1)`.
+
+
+# Problem 2
+
+```{r problem_2}
+
+## Read and clean Mr. Trash Wheel sheet
+
+mr_trash_wheel_df <- read_excel(
+  "./data/trash_wheel_collection_data.xlsx",
+  sheet = "Mr. Trash Wheel",
+  range = cell_cols("A:N"),
+  skip = 1
+) %>% 
+  janitor::clean_names() %>% 
+  filter(!is.na(dumpster)) %>% 
+  mutate(
+    sports_balls = as.integer(round(sports_balls)),
+    year = as.integer(year)
+  )
+
+
+
+```
+
