@@ -216,3 +216,22 @@ viewers_long_df <- viewers_df %>%
   select(series, everything())
 
 ```
+
+
+## Checking for Incomplete Data
+
+```{r p3_incomplete_data}
+
+# Check for bakers without any competition data
+missing_bakers <- bakers_df %>%
+  anti_join(bakes_df, by = c("baker_first_name", "series"))
+print(missing_bakers)
+
+
+# Check for baking data without baker information
+missing_bakes <- bakes_df %>%
+  anti_join(bakers_df, by = c("baker_first_name", "series"))
+print(missing_bakes)
+
+```
+
