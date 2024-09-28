@@ -163,3 +163,56 @@ gwynnda_june_2022_butts <- gwynnda_trash_wheel_df %>%
 The combined Trash Wheel dataset contains `r nrow(combined_trash_wheel)` observations and `r ncol(combined_trash_wheel)` variables. Key variables include the identifier for each trash wheel (`r unique(combined_trash_wheel$trash_wheel)`), the date of collection, the amount of trash collected (in tons and cubic yards), types of litter collected (e.g., plastic bottles, polystyrene, cigarette butts), and number of homes powered based on trash collected.
 
 The data shows that Professor Trash Wheel has collected a total of `r prof_total_weight` tons of trash since its deployment. In June 2022, Gwynnda Trash Wheel collected `r scales::comma(gwynnda_june_2022_butts, accuracy = 1)` cigarette butts.
+
+# Problem 3
+
+## Importing and Cleaning datasets.
+
+```{r p3_import_clean}
+
+# Import and clean results csv
+
+results_df <- read_csv("./data/results.csv", skip = 2) %>% 
+  janitor::clean_names() %>%
+  rename(baker_first_name = baker)
+
+# Import and clean results bakers csv
+
+bakers_df <- read_csv("./data/bakers.csv") %>% 
+  janitor::clean_names() %>%
+  separate(baker_name, into = c("baker_first_name", "baker_last_name"), sep = " ", extra = "merge")
+
+# Import and clean results bakes csv
+
+bakes_df <- read_csv("./data/bakes.csv") %>% 
+  janitor::clean_names() %>%
+  rename(baker_first_name = baker) %>%
+  mutate(across(where(is.character), ~case_match(
+    .,
+    c("Unknown", "UNKNOWN", "N/A") ~ NA_character_,
+    .default = . %>%
+      str_replace_all("([a-z])([A-Z])", "\\1 \\2") %>%
+      str_replace_all("(?<=[a-z])with", " with") %>%
+      str_replace_all("\\s+", " ") %>%
+      str_trim()
+  )),
+  baker_first_name = str_remove_all(baker_first_name, "\""))  # Removes the quotes from "Jo"
+
+# Import and clean viewers csv
+
+viewers_df <- read_csv("./data/viewers.csv") %>% 
+  janitor::clean_names()
+
+# Pivoting viewers_df into long format
+
+viewers_long_df <- viewers_df %>%
+  pivot_longer(
+    cols = starts_with("series_"),
+    names_to = "series",
+    values_to = "viewers",
+    names_prefix = "series_"
+  ) %>%
+  mutate(series = as.numeric(series)) %>%
+  select(series, everything())
+
+```
