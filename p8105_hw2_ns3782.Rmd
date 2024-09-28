@@ -244,7 +244,6 @@ print(missing_bakes)
 bakers_bake_merged_df <- bakers_df %>%
   full_join(bakes_df, by = c("baker_first_name", "series")) %>%
   full_join(results_df, by = c("baker_first_name", "series", "episode")) %>%
-  full_join(viewers_long_df, by = c("series", "episode")) %>%
   select(baker_first_name, baker_last_name, series, episode, everything()) %>%
   filter(!(is.na(baker_first_name) & is.na(baker_last_name)))  %>% 
   group_by(series) %>% 
