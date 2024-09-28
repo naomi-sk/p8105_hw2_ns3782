@@ -227,7 +227,6 @@ missing_bakers <- bakers_df %>%
   anti_join(bakes_df, by = c("baker_first_name", "series"))
 print(missing_bakers)
 
-
 # Check for baking data without baker information
 missing_bakes <- bakes_df %>%
   anti_join(bakers_df, by = c("baker_first_name", "series"))
@@ -235,3 +234,21 @@ print(missing_bakes)
 
 ```
 
+
+## Merging and Cleaning merged data
+
+```{r p3_merging_data}
+
+# Merging dataframes, removing incomplete data, and filling in missing contestant last names
+
+bakers_bake_merged_df <- bakers_df %>%
+  full_join(bakes_df, by = c("baker_first_name", "series")) %>%
+  full_join(results_df, by = c("baker_first_name", "series", "episode")) %>%
+  full_join(viewers_long_df, by = c("series", "episode")) %>%
+  select(baker_first_name, baker_last_name, series, episode, everything()) %>%
+  filter(!(is.na(baker_first_name) & is.na(baker_last_name)))  %>% 
+  group_by(series) %>% 
+  fill(baker_last_name) %>%  
+  ungroup()  
+
+```
