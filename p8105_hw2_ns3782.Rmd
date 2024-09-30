@@ -262,9 +262,11 @@ print(missing_results)
 bakers_bake_merged_df <- bakers_bake_merged_df %>%
   mutate(baker_first_name = if_else(baker_first_name == "Jo", "Joanne", baker_first_name))
 
+# Merging bakers_bake_merged_df and results_df 
+bakers_bake_merged_df <- bakers_bake_merged_df %>%
+  left_join(results_df, by = c("baker_first_name", "series", "episode"))
 
 # Export the merged dataset
 write_csv(bakers_bake_merged_df, "./data/gbbo_merged_data.csv")
-
 
 ```
