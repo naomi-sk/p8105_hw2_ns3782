@@ -218,36 +218,53 @@ viewers_long_df <- viewers_df %>%
 ```
 
 
-## Checking for Incomplete Data
+## Checking for Incomplete Data between bakers_df and bakes_df
 
 ```{r p3_incomplete_data}
 
 # Check for bakers without any competition data
+
 missing_bakers <- bakers_df %>%
   anti_join(bakes_df, by = c("baker_first_name", "series"))
 print(missing_bakers)
 
-# Check for baking data without baker information
+# Check for bakes information without baker information
+
 missing_bakes <- bakes_df %>%
   anti_join(bakers_df, by = c("baker_first_name", "series"))
 print(missing_bakes)
 
 ```
 
+There are 25 bakers from bakers_df without bakes information (bakes_df).
+There is no bakes data from bakes_df with missing bakers information (bakers_df).
 
-## Merging and Cleaning merged data
+## Merging, cleaning, and exporting final dataset
 
 ```{r p3_merging_data}
 
-# Merging dataframes, removing incomplete data, and filling in missing contestant last names
+# Merging bakers_df and bakes_df 
 
-bakers_bake_merged_df <- bakers_df %>%
-  full_join(bakes_df, by = c("baker_first_name", "series")) %>%
-  full_join(results_df, by = c("baker_first_name", "series", "episode")) %>%
-  select(baker_first_name, baker_last_name, series, episode, everything()) %>%
-  filter(!(is.na(baker_first_name) & is.na(baker_last_name)))  %>% 
-  group_by(series) %>% 
-  fill(baker_last_name) %>%  
-  ungroup()  
+bakers_bake_merged_df <- full_join(bakes_df, bakers_df, 
+                                   by = c("baker_first_name", "series"), 
+                                   suffix = c("", "_baker")) %>%
+    select(baker_first_name, baker_last_name, series, episode, baker_age, baker_occupation, hometown, everything())
+
+
+# Check for results information missing from bakers_bake_merged_df
+
+missing_results <- results_df %>%
+  anti_join(bakers_bake_merged_df, by = c("baker_first_name", "series"))
+print(missing_results)
+
+# Correcting baker_first_name discrepancy between datasets
+
+bakers_bake_merged_df <- bakers_bake_merged_df %>%
+  mutate(baker_first_name = if_else(baker_first_name == "Jo", "Joanne", baker_first_name))
+
+
+# Export the merged dataset
+write_csv(bakers_bake_merged_df, "./data/gbbo_merged_data.csv")
+
 
 ```
