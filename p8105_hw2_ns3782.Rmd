@@ -269,4 +269,11 @@ bakers_bake_merged_df <- bakers_bake_merged_df %>%
 # Export the merged dataset
 write_csv(bakers_bake_merged_df, "./data/gbbo_merged_data.csv")
 
+# Identify potential duplicates
+duplicates <- bakers_bake_merged_df %>%
+  group_by(series, episode, baker_first_name) %>%
+  filter(n() > 1) %>%
+  arrange(series, episode, baker_first_name)
+
+
 ```
