@@ -305,3 +305,11 @@ I then merged results_df with bakers_bake_merged_df to create the final Great Br
 After merging, I performed a check for duplicates, looking at whether a baker might have multiple entries for the same episode and series. I also checked whether the merged dataset contained all the necessary variables from each of the original datasets.
 
 I then exported this data as a CSV in the appropriate local directory.
+
+
+## Great British Bakeoff: Final dataset description
+
+The final merged GBBO dataset provides a comprehensive view of the competition across multiple seasons. The dataset contains `r nrow(bakers_bake_merged_df)` rows and `r ncol(bakers_bake_merged_df)` columns. It includes data for `r length(unique(bakers_bake_merged_df$baker_first_name))` unique contestants across `r length(unique(bakers_bake_merged_df$series))` seasons of the show. 
+It provides additional information about each contestant, including their age, occupation and hometown, their baking, and their performance throughout the competition.
+The ages of contestants range from `r min(bakers_bake_merged_df$baker_age, na.rm = TRUE)` to `r max(bakers_bake_merged_df$baker_age, na.rm = TRUE)` years old, with an average age of `r round(mean(bakers_bake_merged_df$baker_age, na.rm = TRUE), 1)` years.
+
