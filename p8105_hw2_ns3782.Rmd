@@ -315,11 +315,6 @@ The ages of contestants range from `r min(bakers_bake_merged_df$baker_age, na.rm
 
 ## Season Star Bakers and Overview
 
-In season 5, Nancy was the dark horse of the competition - she only received the Star Baker award once in the first episode, but won the entire episode at the end of the season.
-In season 6, it seemed a bit more predictable towards the later half of the series. While Ian seemed strong for the first few episodes, winning 3 Star Baker awards until episode 4, Nadiya began to outperform him in later episodes - garnering 3 Star Baker  awards in the latter part of the series, and winning the competition overall.
-Season 7 seemed harder to predict a clear winner early on, however Candice won the most Star Baker awards before winning the whole competition.
-In Season 8, Steven did consistently well, earning two Star Baker awards early on in the season and three overall. However, Sophie secured the win unexpectedly later on in the season, even though she only won two Star Baker awards overall.
-
 ```{r p3_winners_outcome}
 
 star_bakers <- bakers_bake_merged_df %>%
@@ -330,3 +325,29 @@ star_bakers <- bakers_bake_merged_df %>%
 
 ```
 
+In season 5, Nancy was the dark horse of the competition - she only received the Star Baker award once in the first episode, but won the entire episode at the end of the season.
+In season 6, it seemed a bit more predictable towards the later half of the series. While Ian seemed strong for the first few episodes, winning 3 Star Baker awards until episode 4, Nadiya began to outperform him in later episodes - garnering 3 Star Baker  awards in the latter part of the series, and winning the competition overall.
+Season 7 seemed harder to predict a clear winner early on, however Candice won the most Star Baker awards before winning the whole competition.
+In Season 8, Steven did consistently well, earning two Star Baker awards early on in the season and three overall. However, Sophie secured the win unexpectedly later on in the season, even though she only won two Star Baker awards overall.
+
+## Viewers Data
+
+```{r p3_viewers}
+
+# Show the first 10 rows of tidy viewers data
+head(viewers_long_df, 10)
+
+# Average viewership Season 1
+mean_viewer_s1 <- viewers_long_df %>%
+  filter(series == 1) %>%
+  summarise(average_viewership = mean(viewers, na.rm = TRUE))
+
+# Average viewership Season 5
+mean_viewer_s5 <- viewers_long_df %>%
+  filter(series == 5) %>%
+  summarise(average_viewership = mean(viewers, na.rm = TRUE))
+
+
+```
+
+The average viewership in season 1 was `r mean_viewer_s1` million, increasing to an average viewership of `r mean_viewer_s5` million in season 5.
