@@ -277,3 +277,31 @@ duplicates <- bakers_bake_merged_df %>%
 
 
 ```
+
+## Data Cleaning Process
+
+The first step in my data wrangling process involved importing and cleaning all 4 datasets. I used the janitor package to convert column names into snake case. For the results.csv, the first two rows were skipped to avoid a header in the data.
+For some datasets, data cleaning and wrangling required extra steps. For instance, with bakers.csv, I decided to split the baker names into first and last names. This ensured that variables across multiple datasets were consistent and appropriately defined in preparation for merging datasets later on. In the case of bakes.csv, I also had some minor formatting to do to address trailing whitespace, incorrect punctuation in string characters, and ensuring correct spacing between words.
+Viewers.csv was not in tidy format. As a result, I had to pivot it into long format for it to be tidy, with each variable forming a column and each observation forming a row.
+
+As part of my data cleaning process, I checked for inconsistent/missing data across datasets. Anti-joins were used to check for bakers without competition data and bakes without baker information.
+From this, I found that there were 25 bakers from bakers_df without bakes information (bakes_df).
+There was no bakes data from bakes_df with missing bakers information (bakers_df).
+
+While I had the opportunity to remove the 25 bakers from the dataset, I chose not to so as to preserve as much information as possible. These bakers might represent contestants who were selected but didn't participate in any bakes, or there might be missing data for their bakes. Keeping this information could be valuable for future analyses or for understanding the completeness of the dataset.
+
+Questions I had were:
+
+* Why are there 25 bakers without bakes information? Are these from specific seasons or years?
+* Should I include these bakers in the final merged dataset, even though they lack bake information?
+* How should I handle potential discrepancies in baker names across datasets?
+
+After careful consideration, I decided to keep all bakers in the dataset and use a full join when merging bakers_df and bakes_df to ensure no information was lost. First, I used full_join on baker_first_name and series to merge bakes_df and bakers_df in order to preserve all information across both datasets. As expected based on the check I did previously, this dataset bakers_bake_merged_df had 25 observations (bakers) without bakes information.
+
+Next, I checked for inconsistent/missing data across datasets between the merged dataset and results_df. There were 8 observations (bakers) in the results_df that did not appear in the merged dataset. However, upon observation, this issue was a name discrepancy. In results_df, the baker was named "Joanne", however in bakers_bake_merged_df, the same baker is named "Jo". I confirmed that these were the same individual by looking up contestant information details of the Great British Bakeoff season 2 online.
+
+In order to rectify this discrepancy, I renamed "Jo" from bakers_bake_merged_df to "Joanne" to be consistent across datasets.
+I then merged results_df with bakers_bake_merged_df to create the final Great British Bakeoff dataset.
+After merging, I performed a check for duplicates, looking at whether a baker might have multiple entries for the same episode and series. I also checked whether the merged dataset contained all the necessary variables from each of the original datasets.
+
+I then exported this data as a CSV in the appropriate local directory.
