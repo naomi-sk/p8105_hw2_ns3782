@@ -137,26 +137,29 @@ gwynnda_trash_wheel_df <- read_excel(
   )
 
 
-# Combine all trash wheel datasets
+# Combine all trash wheel datasets, removing rows with no data
 
 combined_trash_wheel <- bind_rows(
   mr_trash_wheel_df, 
   prof_trash_wheel_df, 
   gwynnda_trash_wheel_df
 ) %>%
+  filter(if_any(-c(dumpster, trash_wheel), ~ !is.na(.))) %>%
   select(trash_wheel, everything())
+
+
 
 # Total weight collected by Prof Trash Wheel
 
 prof_total_weight <- prof_trash_wheel_df %>%
-  summarize(total_weight = sum(weight_tons)) %>%
+  summarize(total_weight = sum(weight_tons, na.rm = TRUE)) %>%
   pull(total_weight)
 
 # Total cigarette butts collected by Gwynnda June 2022
 
 gwynnda_june_2022_butts <- gwynnda_trash_wheel_df %>%
   filter(month == "June", year == 2022) %>%
-  summarize(total_butts = sum(cigarette_butts)) %>%
+  summarize(total_butts = sum(cigarette_butts, na.rm = TRUE)) %>%
   pull(total_butts)
 
 ```
