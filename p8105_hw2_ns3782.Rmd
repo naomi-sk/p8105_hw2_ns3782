@@ -137,14 +137,13 @@ gwynnda_trash_wheel_df <- read_excel(
   )
 
 
-# Combine all trash wheel datasets, removing rows with no data
+# Combine all trash wheel datasets
 
 combined_trash_wheel <- bind_rows(
   mr_trash_wheel_df, 
   prof_trash_wheel_df, 
   gwynnda_trash_wheel_df
 ) %>%
-  filter(if_any(-c(dumpster, trash_wheel), ~ !is.na(.))) %>%
   select(trash_wheel, everything())
 
 
