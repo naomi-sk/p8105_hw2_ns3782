@@ -3,7 +3,6 @@ title: "p8105_hw2_ns3782"
 author: "NSK"
 date: "2024-09-26"
 output: github_document
-toc: true
 code_folding: hide
 ---
 
