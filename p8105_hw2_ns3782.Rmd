@@ -165,7 +165,7 @@ gwynnda_june_2022_butts <- gwynnda_trash_wheel_df %>%
 
 ## Combined trash wheel Dataset Overview
 
-The combined Trash Wheel dataset contains `r nrow(combined_trash_wheel)` observations and `r ncol(combined_trash_wheel)` variables. Key variables include the identifier for each trash wheel (`r unique(combined_trash_wheel$trash_wheel)`), the date of collection, the amount of trash collected (in tons and cubic yards), types of litter collected (e.g., plastic bottles, polystyrene, cigarette butts), and number of homes powered based on trash collected.
+The combined Trash Wheel dataset contains `r nrow(combined_trash_wheel)` observations and `r ncol(combined_trash_wheel)` variables. Key variables include the identifier for each trash wheel (`r paste(unique(combined_trash_wheel$trash_wheel), collapse = ", ")`), `r paste(setdiff(names(combined_trash_wheel), "trash_wheel"), collapse = ", ")`.
 
 The data shows that Professor Trash Wheel has collected a total of `r prof_total_weight` tons of trash since its deployment. In June 2022, Gwynnda Trash Wheel collected `r scales::comma(gwynnda_june_2022_butts, accuracy = 1)` cigarette butts.
 
@@ -330,6 +330,12 @@ star_bakers <- bakers_bake_merged_df %>%
          result %in% c("STAR BAKER", "WINNER")) %>%
   select(series, episode, baker_first_name, result) %>%
   arrange(series, episode)
+
+# Create readable table
+
+knitr::kable(star_bakers, 
+             caption = "Star Bakers and Winners (Seasons 5-10)",
+             col.names = c("Season", "Episode", "Baker", "Result"))
 
 ```
 
