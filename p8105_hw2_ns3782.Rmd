@@ -311,9 +311,7 @@ After careful consideration, I decided to keep all bakers in the dataset and use
 
 Next, I checked for inconsistent/missing data across datasets between the merged dataset and results_df. There were 8 observations (bakers) in the results_df that did not appear in the merged dataset. However, upon observation, this issue was a name discrepancy. In results_df, the baker was named "Joanne", however in bakers_bake_merged_df, the same baker is named "Jo". I confirmed that these were the same individual by looking up contestant information details of the Great British Bakeoff season 2 online.
 
-In order to rectify this discrepancy, I renamed "Jo" from bakers_bake_merged_df to "Joanne" to be consistent across datasets.
-I then merged results_df with bakers_bake_merged_df to create the final Great British Bakeoff dataset.
-After merging, I performed a check for duplicates, looking at whether a baker might have multiple entries for the same episode and series. I also checked whether the merged dataset contained all the necessary variables from each of the original datasets.
+In order to rectify this discrepancy, I renamed "Jo" from bakers_bake_merged_df to "Joanne" to be consistent across datasets. I then merged results_df with bakers_bake_merged_df to create the final Great British Bakeoff dataset. After merging, I performed a check for duplicates, looking at whether a baker might have multiple entries for the same episode and series. I also removed rows where contestants did not participate in the episode/series. I also checked whether the merged dataset contained all the necessary variables from each of the original datasets.
 
 I then exported this data as a CSV in the appropriate local directory.
 
