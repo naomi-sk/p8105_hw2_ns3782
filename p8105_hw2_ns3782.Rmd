@@ -368,4 +368,4 @@ mean_viewer_s5 <- viewers_long_df %>%
 
 ```
 
-The average viewership in season 1 was `r mean_viewer_s1` million, increasing to an average viewership of `r mean_viewer_s5` million in season 5.
+The average viewership in season 1 was `r mean_viewer_s1` units unspecified, increasing to an average viewership of `r mean_viewer_s5` units unspecified in season 5.
