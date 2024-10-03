@@ -38,7 +38,7 @@ nyc_transit_df =
 
 ## Dataset overview
 
-The cleaned NYC Transit Subway Entrance and Exit dataset contains information about entrances and exits of subway stations in New York City. Variables selected for inclusion in the cleaned dataset imported into R include the line, station name, location coordinates (latitude and longitude), routes served (route 1 through to route 11), entry, vending presence, entrance type, and ADA compliance. 
+The cleaned NYC Transit Subway Entrance and Exit dataset contains information about entrances and exits of subway stations in New York City. Variables selected for inclusion in the cleaned dataset imported into R include `r paste(names(nyc_transit_df), collapse = ", ")`.
 
 The data cleaning process involved reading the CSV file from a local subdirectory /data, cleaning variable names using the janitor package, selecting variables of interest, and converting the 'entry' variable from character ("YES"/"NO") to logical (TRUE/FALSE). 
 
