@@ -547,28 +547,165 @@ Steven,Carter-Bailey,8,9,34,Marketer,"Watford, Hertfordshire",Key Lime Cheesecak
 Kate,Lyon,8,10,29,Health and safety inspector,Merseyside,"Roman Spelt, Coconut Kala Chana and Flower Breads","White Chocolate, Yuzu and Lychee Entremet",3,Runner-up
 Sophie,Faldo,8,10,33,Former army officer and trainee stuntwoman,"West Molesey, Surrey","Spelt Boules, Mushroom Ciabatta and Orange Plaited Brioche",'Ode to the Honey Bee' Entremet,2,WINNER
 Steven,Carter-Bailey,8,10,34,Marketer,"Watford, Hertfordshire","Spelt & Rye, Toasted Garlic & Fontina and Sweet Chocolate Breads",'Yin Yang' Entremet,1,Runner-up
-Alice,Fevronia,10,NA,28,Geography teacher,Essex,NA,NA,NA,NA
-Amelia,LeBruin,10,NA,24,Fashion designer,Halifax,NA,NA,NA,NA
-Antony,Amourdoux,9,NA,30,Banker,London,NA,NA,NA,NA
-Briony,Williams,9,NA,33,Full-time parent,Bristol,NA,NA,NA,NA
-Dan,Beasley-Harling,9,NA,36,Full-time parent,London,NA,NA,NA,NA
-Dan,Chambers,10,NA,32,Support worker,Rotherham,NA,NA,NA,NA
-David,Atherton,10,NA,36,International health adviser,Whitby,NA,NA,NA,NA
-Helena,Garcia,10,NA,40,Online project manager,Leeds,NA,NA,NA,NA
-Henry,Bird,10,NA,20,Student,Durham,NA,NA,NA,NA
-Imelda,McCarron,9,NA,33,Countryside recreation officer,County Tyrone,NA,NA,NA,NA
-Jamie,Finn,10,NA,20,Part-time waiter,Surrey,NA,NA,NA,NA
-Jon,Jenkins,9,NA,47,Blood courier,Newport,NA,NA,NA,NA
-Karen,Wright,9,NA,60,In-store sampling assistant,Wakefield,NA,NA,NA,NA
-Kim-Joy,Hewlett,9,NA,27,Mental health specialist,Leeds,NA,NA,NA,NA
-Luke,Thompson,9,NA,30,Civil servant/house and techno DJ,Sheffield,NA,NA,NA,NA
-Manon,Lagrave,9,NA,26,Software project manager,London,NA,NA,NA,NA
-Michael,Chakraverty,10,NA,26,Theatre manager/fitness instructor,Stratford-upon-Avon,NA,NA,NA,NA
-Michelle,Evans-Fecci,10,NA,35,Print shop administrator,"Tenby, Wales",NA,NA,NA,NA
-Phil,Thorne,10,NA,56,HGV driver,Rainham,NA,NA,NA,NA
-Priya,O'Shea,10,NA,34,Marketing consultant,Leicester,NA,NA,NA,NA
-Rahul,Mandal,9,NA,30,Research scientist,Rotherham,NA,NA,NA,NA
-Rosie,Brandreth-Poynter,10,NA,28,Veterinary surgeon,Somerset,NA,NA,NA,NA
-Ruby,Bhogal,9,NA,29,Project manager,London,NA,NA,NA,NA
-Steph,Blackwell,10,NA,28,Shop assistant,Chester,NA,NA,NA,NA
-Terry,Hartill,9,NA,56,Retired air steward,West Midlands,NA,NA,NA,NA
+Diana,NA,5,5,NA,NA,NA,NA,NA,NA,WD
+Diana,NA,5,6,NA,NA,NA,NA,NA,NA,IN
+Diana,NA,5,7,NA,NA,NA,NA,NA,NA,IN
+Diana,NA,5,8,NA,NA,NA,NA,NA,NA,IN
+Diana,NA,5,9,NA,NA,NA,NA,NA,NA,IN
+Diana,NA,5,10,NA,NA,NA,NA,NA,NA,IN
+Antony,NA,9,1,NA,NA,NA,NA,NA,12,IN
+Briony,NA,9,1,NA,NA,NA,NA,NA,2,IN
+Dan,NA,9,1,NA,NA,NA,NA,NA,4,IN
+Jon,NA,9,1,NA,NA,NA,NA,NA,5,IN
+Karen,NA,9,1,NA,NA,NA,NA,NA,6,IN
+Kim-Joy,NA,9,1,NA,NA,NA,NA,NA,10,IN
+Luke,NA,9,1,NA,NA,NA,NA,NA,8,IN
+Rahul,NA,9,1,NA,NA,NA,NA,NA,7,IN
+Ruby,NA,9,1,NA,NA,NA,NA,NA,1,IN
+Terry,NA,9,1,NA,NA,NA,NA,NA,9,IN
+Imelda,NA,9,1,NA,NA,NA,NA,NA,11,OUT
+Manon,NA,9,1,NA,NA,NA,NA,NA,3,STAR BAKER
+Antony,NA,9,2,NA,NA,NA,NA,NA,9,IN
+Briony,NA,9,2,NA,NA,NA,NA,NA,5,IN
+Dan,NA,9,2,NA,NA,NA,NA,NA,3,IN
+Jon,NA,9,2,NA,NA,NA,NA,NA,1,IN
+Karen,NA,9,2,NA,NA,NA,NA,NA,11,IN
+Kim-Joy,NA,9,2,NA,NA,NA,NA,NA,4,IN
+Manon,NA,9,2,NA,NA,NA,NA,NA,6,IN
+Ruby,NA,9,2,NA,NA,NA,NA,NA,10,IN
+Terry,NA,9,2,NA,NA,NA,NA,NA,8,IN
+Luke,NA,9,2,NA,NA,NA,NA,NA,7,OUT
+Rahul,NA,9,2,NA,NA,NA,NA,NA,2,STAR BAKER
+Briony,NA,9,3,NA,NA,NA,NA,NA,9,IN
+Dan,NA,9,3,NA,NA,NA,NA,NA,6,IN
+Jon,NA,9,3,NA,NA,NA,NA,NA,2,IN
+Karen,NA,9,3,NA,NA,NA,NA,NA,5,IN
+Kim-Joy,NA,9,3,NA,NA,NA,NA,NA,10,IN
+Manon,NA,9,3,NA,NA,NA,NA,NA,3,IN
+Ruby,NA,9,3,NA,NA,NA,NA,NA,7,IN
+Terry,NA,9,3,NA,NA,NA,NA,NA,1,IN
+Antony,NA,9,3,NA,NA,NA,NA,NA,8,OUT
+Rahul,NA,9,3,NA,NA,NA,NA,NA,4,STAR BAKER
+Terry,NA,9,4,NA,NA,NA,NA,NA,NA,[a]
+Briony,NA,9,4,NA,NA,NA,NA,NA,5,IN
+Jon,NA,9,4,NA,NA,NA,NA,NA,3,IN
+Karen,NA,9,4,NA,NA,NA,NA,NA,7,IN
+Kim-Joy,NA,9,4,NA,NA,NA,NA,NA,6,IN
+Manon,NA,9,4,NA,NA,NA,NA,NA,8,IN
+Rahul,NA,9,4,NA,NA,NA,NA,NA,4,IN
+Ruby,NA,9,4,NA,NA,NA,NA,NA,2,IN
+Dan,NA,9,4,NA,NA,NA,NA,NA,1,STAR BAKER
+Briony,NA,9,5,NA,NA,NA,NA,NA,6,IN
+Dan,NA,9,5,NA,NA,NA,NA,NA,2,IN
+Jon,NA,9,5,NA,NA,NA,NA,NA,7,IN
+Manon,NA,9,5,NA,NA,NA,NA,NA,5,IN
+Rahul,NA,9,5,NA,NA,NA,NA,NA,3,IN
+Ruby,NA,9,5,NA,NA,NA,NA,NA,1,IN
+Karen,NA,9,5,NA,NA,NA,NA,NA,9,OUT
+Terry,NA,9,5,NA,NA,NA,NA,NA,8,OUT
+Kim-Joy,NA,9,5,NA,NA,NA,NA,NA,4,STAR BAKER
+Jon,NA,9,6,NA,NA,NA,NA,NA,2,IN
+Kim-Joy,NA,9,6,NA,NA,NA,NA,NA,5,IN
+Manon,NA,9,6,NA,NA,NA,NA,NA,4,IN
+Rahul,NA,9,6,NA,NA,NA,NA,NA,3,IN
+Ruby,NA,9,6,NA,NA,NA,NA,NA,7,IN
+Dan,NA,9,6,NA,NA,NA,NA,NA,6,OUT
+Briony,NA,9,6,NA,NA,NA,NA,NA,1,STAR BAKER
+Briony,NA,9,7,NA,NA,NA,NA,NA,5,IN
+Manon,NA,9,7,NA,NA,NA,NA,NA,2,IN
+Rahul,NA,9,7,NA,NA,NA,NA,NA,1,IN
+Ruby,NA,9,7,NA,NA,NA,NA,NA,3,IN
+Jon,NA,9,7,NA,NA,NA,NA,NA,4,OUT
+Kim-Joy,NA,9,7,NA,NA,NA,NA,NA,6,STAR BAKER
+Briony,NA,9,8,NA,NA,NA,NA,NA,1,IN
+Kim-Joy,NA,9,8,NA,NA,NA,NA,NA,2,IN
+Rahul,NA,9,8,NA,NA,NA,NA,NA,5,IN
+Manon,NA,9,8,NA,NA,NA,NA,NA,4,OUT
+Ruby,NA,9,8,NA,NA,NA,NA,NA,3,STAR BAKER
+Kim-Joy,NA,9,9,NA,NA,NA,NA,NA,2,IN
+Rahul,NA,9,9,NA,NA,NA,NA,NA,4,IN
+Briony,NA,9,9,NA,NA,NA,NA,NA,3,OUT
+Ruby,NA,9,9,NA,NA,NA,NA,NA,1,STAR BAKER
+Kim-Joy,NA,9,10,NA,NA,NA,NA,NA,1,Runner-up
+Ruby,NA,9,10,NA,NA,NA,NA,NA,3,Runner-up
+Rahul,NA,9,10,NA,NA,NA,NA,NA,2,WINNER
+Alice,NA,10,1,NA,NA,NA,NA,NA,5,IN
+Amelia,NA,10,1,NA,NA,NA,NA,NA,4,IN
+David,NA,10,1,NA,NA,NA,NA,NA,10,IN
+Helena,NA,10,1,NA,NA,NA,NA,NA,12,IN
+Henry,NA,10,1,NA,NA,NA,NA,NA,1,IN
+Jamie,NA,10,1,NA,NA,NA,NA,NA,13,IN
+Michael,NA,10,1,NA,NA,NA,NA,NA,11,IN
+Phil,NA,10,1,NA,NA,NA,NA,NA,8,IN
+Priya,NA,10,1,NA,NA,NA,NA,NA,7,IN
+Rosie,NA,10,1,NA,NA,NA,NA,NA,2,IN
+Steph,NA,10,1,NA,NA,NA,NA,NA,3,IN
+Dan,NA,10,1,NA,NA,NA,NA,NA,9,OUT
+Michelle,NA,10,1,NA,NA,NA,NA,NA,6,STAR BAKER
+Amelia,NA,10,2,NA,NA,NA,NA,NA,9,IN
+David,NA,10,2,NA,NA,NA,NA,NA,2,IN
+Helena,NA,10,2,NA,NA,NA,NA,NA,12,IN
+Henry,NA,10,2,NA,NA,NA,NA,NA,6,IN
+Michael,NA,10,2,NA,NA,NA,NA,NA,4,IN
+Michelle,NA,10,2,NA,NA,NA,NA,NA,8,IN
+Phil,NA,10,2,NA,NA,NA,NA,NA,3,IN
+Priya,NA,10,2,NA,NA,NA,NA,NA,7,IN
+Rosie,NA,10,2,NA,NA,NA,NA,NA,5,IN
+Steph,NA,10,2,NA,NA,NA,NA,NA,10,IN
+Jamie,NA,10,2,NA,NA,NA,NA,NA,11,OUT
+Alice,NA,10,2,NA,NA,NA,NA,NA,1,STAR BAKER
+Alice,NA,10,3,NA,NA,NA,NA,NA,7,IN
+David,NA,10,3,NA,NA,NA,NA,NA,2,IN
+Helena,NA,10,3,NA,NA,NA,NA,NA,8,IN
+Henry,NA,10,3,NA,NA,NA,NA,NA,1,IN
+Michelle,NA,10,3,NA,NA,NA,NA,NA,5,IN
+Phil,NA,10,3,NA,NA,NA,NA,NA,10,IN
+Priya,NA,10,3,NA,NA,NA,NA,NA,4,IN
+Rosie,NA,10,3,NA,NA,NA,NA,NA,9,IN
+Steph,NA,10,3,NA,NA,NA,NA,NA,3,IN
+Amelia,NA,10,3,NA,NA,NA,NA,NA,11,OUT
+Michael,NA,10,3,NA,NA,NA,NA,NA,6,STAR BAKER
+Alice,NA,10,4,NA,NA,NA,NA,NA,8,IN
+David,NA,10,4,NA,NA,NA,NA,NA,2,IN
+Helena,NA,10,4,NA,NA,NA,NA,NA,9,IN
+Henry,NA,10,4,NA,NA,NA,NA,NA,3,IN
+Michael,NA,10,4,NA,NA,NA,NA,NA,7,IN
+Michelle,NA,10,4,NA,NA,NA,NA,NA,5,IN
+Priya,NA,10,4,NA,NA,NA,NA,NA,10,IN
+Rosie,NA,10,4,NA,NA,NA,NA,NA,4,IN
+Phil,NA,10,4,NA,NA,NA,NA,NA,6,OUT
+Steph,NA,10,4,NA,NA,NA,NA,NA,1,STAR BAKER
+Alice,NA,10,5,NA,NA,NA,NA,NA,6,IN
+David,NA,10,5,NA,NA,NA,NA,NA,9,IN
+Henry,NA,10,5,NA,NA,NA,NA,NA,3,IN
+Michael,NA,10,5,NA,NA,NA,NA,NA,8,IN
+Priya,NA,10,5,NA,NA,NA,NA,NA,2,IN
+Rosie,NA,10,5,NA,NA,NA,NA,NA,5,IN
+Helena,NA,10,5,NA,NA,NA,NA,NA,1,OUT
+Michelle,NA,10,5,NA,NA,NA,NA,NA,7,OUT
+Steph,NA,10,5,NA,NA,NA,NA,NA,4,STAR BAKER
+Alice,NA,10,6,NA,NA,NA,NA,NA,1,IN
+David,NA,10,6,NA,NA,NA,NA,NA,2,IN
+Henry,NA,10,6,NA,NA,NA,NA,NA,4,IN
+Michael,NA,10,6,NA,NA,NA,NA,NA,6,IN
+Rosie,NA,10,6,NA,NA,NA,NA,NA,5,IN
+Priya,NA,10,6,NA,NA,NA,NA,NA,7,OUT
+Steph,NA,10,6,NA,NA,NA,NA,NA,3,STAR BAKER
+Alice,NA,10,7,NA,NA,NA,NA,NA,6,IN
+David,NA,10,7,NA,NA,NA,NA,NA,2,IN
+Rosie,NA,10,7,NA,NA,NA,NA,NA,1,IN
+Steph,NA,10,7,NA,NA,NA,NA,NA,4,IN
+Michael,NA,10,7,NA,NA,NA,NA,NA,5,OUT
+Henry,NA,10,7,NA,NA,NA,NA,NA,3,STAR BAKER
+Alice,NA,10,8,NA,NA,NA,NA,NA,3,IN
+David,NA,10,8,NA,NA,NA,NA,NA,1,IN
+Rosie,NA,10,8,NA,NA,NA,NA,NA,2,IN
+Henry,NA,10,8,NA,NA,NA,NA,NA,5,OUT
+Steph,NA,10,8,NA,NA,NA,NA,NA,4,STAR BAKER
+David,NA,10,9,NA,NA,NA,NA,NA,2,IN
+Steph,NA,10,9,NA,NA,NA,NA,NA,3,IN
+Rosie,NA,10,9,NA,NA,NA,NA,NA,1,OUT
+Alice,NA,10,9,NA,NA,NA,NA,NA,4,STAR BAKER
+Alice,NA,10,10,NA,NA,NA,NA,NA,2,Runner-up
+Steph,NA,10,10,NA,NA,NA,NA,NA,3,Runner-up
+David,NA,10,10,NA,NA,NA,NA,NA,1,WINNER

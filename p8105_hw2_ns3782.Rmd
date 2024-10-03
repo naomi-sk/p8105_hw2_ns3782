@@ -250,8 +250,7 @@ There is no bakes data from bakes_df with missing bakers information (bakers_df)
 # Merging bakers_df and bakes_df 
 
 bakers_bake_merged_df <- full_join(bakes_df, bakers_df, 
-                                   by = c("baker_first_name", "series"), 
-                                   suffix = c("", "_baker")) %>%
+                                   by = c("baker_first_name", "series")) %>%
     select(baker_first_name, baker_last_name, series, episode, baker_age, baker_occupation, hometown, everything())
 
 
@@ -269,7 +268,12 @@ bakers_bake_merged_df <- bakers_bake_merged_df %>%
 # Merging bakers_bake_merged_df and results_df 
 
 bakers_bake_merged_df <- bakers_bake_merged_df %>%
-  left_join(results_df, by = c("baker_first_name", "series", "episode"))
+  full_join(results_df, by = c("baker_first_name", "series", "episode")) 
+
+# Remove rows where contestants did not participate (ie where there were no results)
+
+bakers_bake_merged_df <- bakers_bake_merged_df %>%
+  filter(!is.na(result))
 
 # Export the merged dataset
 
